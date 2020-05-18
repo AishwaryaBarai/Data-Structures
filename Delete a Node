@@ -1,0 +1,14 @@
+def deleteNode(head, position):
+    if head:
+        if(position == 0):
+            head = head.next
+        else:
+            previous = None
+            current = head
+            index = 0
+            while ((index < position) and (current.next !=None)):
+                previous = current
+                current = current.next
+                index +=1
+            previous.next = current.next
+    return head
