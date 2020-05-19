@@ -1,0 +1,9 @@
+def reversePrint(head):
+    stack = []
+    
+    while head is not None:
+        stack.append(head)
+        head = head.next
+
+    while stack:
+        print(stack.pop().data)
