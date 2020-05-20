@@ -1,0 +1,12 @@
+bracket_map = {'}': '{', ')': '(', ']': '['}
+    stack = []
+    for b in s:
+        if b in bracket_map.values():  # openning
+            stack.append(b)
+        elif b in bracket_map.keys():  # closing
+            if not stack or stack.pop() != bracket_map[b]:
+                return "NO"
+    if not stack:
+        return "YES"
+    else:
+        return "NO"
