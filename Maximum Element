@@ -1,0 +1,18 @@
+N = int(input().strip())
+stack = []
+max_x = 0
+for _ in range(N):
+    query = [int(n) for n in input().strip().split()]
+    if query[0] == 1:
+        stack.append(query[1])
+        if query[1] > max_x:
+            max_x = query[1]
+    elif query[0] == 2:
+        if stack.pop() == max_x:
+            if stack:
+                max_x = max(stack)
+            else:
+                max_x = 0
+    elif query[0] == 3:
+        print(max_x)
+            
