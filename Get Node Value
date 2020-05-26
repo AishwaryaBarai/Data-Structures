@@ -1,0 +1,9 @@
+def getNode(head, positionFromTail):
+    count=0
+    second_head = head
+    while head.next:
+        head=head.next
+        count+=1
+    for i in range(count-position):
+        second_head=second_head.next
+    return second_head.data
