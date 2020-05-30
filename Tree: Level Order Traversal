@@ -1,0 +1,9 @@
+lst = []
+def levelOrder(root):
+    print(root.info, end = ' ')
+    if root.left:
+        lst.append(root.left)
+    if root.right:
+        lst.append(root.right)
+    if lst:
+        levelOrder(lst.pop(0))
