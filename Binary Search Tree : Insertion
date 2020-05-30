@@ -1,0 +1,21 @@
+def insert(self, val):
+        newnode=Node(val)
+        if self.root==None:
+            self.root=newnode
+            return
+
+        temp=self.root
+
+        while(temp!=None):
+            if temp.info>val:
+                if temp.left is None:
+                    temp.left=newnode
+                    break
+                else:
+                    temp=temp.left
+            else:
+                if temp.right is None:
+                    temp.right=newnode
+                    break
+                else:
+                    temp=temp.right
