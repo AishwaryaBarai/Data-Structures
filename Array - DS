@@ -1,6 +1,6 @@
 def reverseArray(a):
-    temp = []
+    tmp = []
     size = len(a)
     for i in range(size-1, -1, -1):
-        temp.append(a[i])
-    return temp
+        tmp.append(a[i])
+    return tmp
