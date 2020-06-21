@@ -3,3 +3,6 @@ def preOrder(root):
         print (root.info,end=' ')
         preOrder(root.left)
         preOrder(root.right)
+
+
+time complexity:
