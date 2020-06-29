@@ -1,0 +1,6 @@
+def compare_lists(llist1, llist2):
+    if (llist1 ==None and llist2 == None):
+        return 1
+    if (llist1 != None and llist2 != None):
+        return ((llist1.data == llist2.data) and compare_lists(llist1.next, llist2.next))
+    return 0
