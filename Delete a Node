@@ -12,3 +12,17 @@ def deleteNode(head, position):
                 index +=1
             previous.next = current.next
     return head
+
+
+
+def deleteNode(head, position):
+    if position == 0:
+        head = head.next
+    elif head:
+        curr = head
+        count = 0
+        while count < position -1:
+            curr = curr.next
+            count +=1
+        curr.next = curr.next.next
+    return head
