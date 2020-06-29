@@ -1,0 +1,13 @@
+def removeDuplicates(head):
+    stack = []
+    prev = None
+    curr = head
+    while curr:
+        if curr.data in stack:
+            prev.next = curr.next
+            curr = None
+        else:
+            stack.append(curr.data)
+            prev = curr
+        curr = prev.next
+    return head
